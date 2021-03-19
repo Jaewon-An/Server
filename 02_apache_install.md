@@ -24,7 +24,7 @@
 ### 3. workers.properties 파일생성
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d
-[root@localhost conf]# vi workers.properties
+[root@localhost conf.d]# vi workers.properties
 ```
 workers.properties 내용
 ```configure

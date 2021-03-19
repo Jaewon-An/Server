@@ -5,4 +5,4 @@
  * [아파치설치 및 연동](https://github.com/Jaewon-An/Server/blob/main/Apache/01_install.md)
 
 ### 기타
-*[마크다운사용법 링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+* [마크다운사용법 링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)

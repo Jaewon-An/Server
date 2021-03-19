@@ -13,3 +13,5 @@
 [root@localhost ~]# vi /etc/profile
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 ```
+
+### [톰캣설치 바로가기](https://github.com/Jaewon-An/Server/blob/main/01_tomcat_install.md)

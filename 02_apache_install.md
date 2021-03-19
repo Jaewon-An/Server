@@ -23,7 +23,7 @@
 ```
 ### 3. workers.properties 파일생성
 ```console
-[root@localhost ~]# cd /etc/httpd/conf
+[root@localhost ~]# cd /etc/httpd/conf.d
 [root@localhost conf]# vi workers.properties
 ```
 workers.properties 내용

@@ -23,6 +23,7 @@ CATALINA_OPTS="$CATALINA_OPTS -Xms4096m -Xmx4096m -XX:NewSize=2048m -XX:MaxNewSi
 ```
 
 ### 4. tomcat-native 설치
+tomcat-native 설치
 ```console
 [root@localhost ~]# yum install gcc make redhat-rpm-config apr* openssl*
 [root@localhost ~]# cd /home/jnet/tomcat9/bin
@@ -30,6 +31,9 @@ CATALINA_OPTS="$CATALINA_OPTS -Xms4096m -Xmx4096m -XX:NewSize=2048m -XX:MaxNewSi
 [root@localhost bin]#  cd tomcat-native-1.2.26-src/native
 [root@localhost native]#  ./configure
 [root@localhost native]# make && make install
+```
+etc.profile 수정
+```console
 [root@localhost native]## vi /etc/profile
 ```
 etc.profile 추가 내용
@@ -37,7 +41,8 @@ etc.profile 추가 내용
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 ```
 
-### 6. 권한설정 및 테스트
+### 6. 소유자 설정 및 테스트
+작업 완료 후 소유자 jnet 로 
 ```console
 [root@localhost ~]# cd /home/jnet/
 [root@localhost ~]# chown jnet:jnet -R /home/jnet/tomcat9
@@ -82,11 +87,12 @@ tomcat.service 등록 및 실행 테스트
 [root@localhost system]# systemctl stop tomcat
 ```
 ### 8. AJP13 설정
+server.xml 수정
 ```console
 [root@localhost ~]# su - jnet
 [jnet@localhost ~]$ vi ~/tomcat9/conf/server.xml
 ```
-server.xml 수정내용
+server.xml ajp13 컨넥터 주석 해제 및 수정
 ```xml
 <Connector protocol="AJP/1.3"
            address="0.0.0.0"

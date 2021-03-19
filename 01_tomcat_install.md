@@ -7,7 +7,7 @@
 [root@localhost jnet]# mv apache-tomcat-9.0.44 tomcat9
 ```
 
-### 3. Tomcat 실행 옵션 파일 생성
+### 2. Tomcat 실행 옵션 파일 생성
  setenv.sh 파일생성
 ```console
 [root@localhost ~]# cd /home/jnet/tomcat9/bin
@@ -22,7 +22,7 @@ CATALINA_OPTS="$CATALINA_OPTS -server -Dfile.encoding=UTF8 -Duser.timezone=GMT+9
 CATALINA_OPTS="$CATALINA_OPTS -Xms4096m -Xmx4096m -XX:NewSize=2048m -XX:MaxNewSize=2048m"
 ```
 
-### 4. tomcat-native 설치
+### 3. tomcat-native 설치
 tomcat-native 설치
 ```console
 [root@localhost ~]# yum install gcc make redhat-rpm-config apr* openssl*
@@ -41,7 +41,7 @@ etc.profile 추가 내용
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 ```
 
-### 6. 소유자 설정 및 테스트
+### 4. 소유자 설정 및 테스트
 작업 완료 후 소유자 jnet 로 
 ```console
 [root@localhost ~]# cd /home/jnet/
@@ -53,7 +53,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 [jnet@localhost bin]$ tail -100f /home/jnet/tomcat9/logs/catalina.out
 ```
 
-### 7. 자동실행 설정
+### 5. 자동실행 설정
 tomcat.service 파일 생성
 ```console
 [root@localhost ~]# cd /usr/lib/systemd/system
@@ -86,7 +86,7 @@ tomcat.service 등록 및 실행 테스트
 [root@localhost system]# systemctl start tomcat
 [root@localhost system]# systemctl stop tomcat
 ```
-### 8. AJP13 설정
+### 6. AJP13 설정
 server.xml 수정
 ```console
 [root@localhost ~]# su - jnet

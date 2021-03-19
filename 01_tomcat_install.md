@@ -100,3 +100,5 @@ server.xml ajp13 컨넥터 주석 해제 및 수정
            redirectPort="8443"
            secretRequired="false" URIEncoding="UTF-8"/>
 ```
+
+### [아파치설치 및 연동 바로가기](https://github.com/Jaewon-An/Server/blob/main/02_apache_install.md)

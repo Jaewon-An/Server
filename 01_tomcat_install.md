@@ -8,6 +8,7 @@
 ```
 
 ### 3. Tomcat 실행 옵션 파일 생성
+ setenv.sh 파일생성
 ```console
 [root@localhost ~]# cd /home/jnet/tomcat9/bin
 [root@localhost bin]#  vi setenv.sh

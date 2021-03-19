@@ -35,7 +35,7 @@ worker.ajp13.type=ajp13
 worker.ajp13.lbfactor=1
 ```
 
-### 3. jk 모듈 설정
+### 4. jk 모듈 설정
 mod_jk.conf 파일생성
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d

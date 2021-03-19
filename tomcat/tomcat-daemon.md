@@ -21,9 +21,15 @@ test ".$TOMCAT_USER" = . && TOMCAT_USER=jnet
 # chkconfig: 2345 99 99
 # description: Tomcat startup file
 CATALINA_HOME=/home/jnet/tomcat9
+[root@localhost bin]# cp /home/jnet/tomcat9/bin/tomcat9 /etc/rc.d/init.d/
+[root@localhost bin]# cd /etc/rc.d/init.d/
+[root@localhost bin]# chkconfig --add tomcat9
+
 ```
 * make시 아래 경고 무시
 ```console
 jsvc-unix.c:1311:20: warning: assignment to ‘__sighandler_t’ {aka ‘void (*)(int)’} from incompatible pointer type ‘void (*)(int,  siginfo_t *, void *)’ {aka ‘void (*)(int,  struct <anonymous> *, void *)’} [-Wincompatible-pointer-types]
      act.sa_handler = controller;
 ```
+
+*

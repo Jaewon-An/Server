@@ -21,3 +21,8 @@
     -r : 0~500 사이의 GID 설정
     ```
    * groupdel <그룹이름>
+
+
+```console
+systemctl list-units --type service
+```

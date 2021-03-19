@@ -36,11 +36,12 @@ worker.ajp13.lbfactor=1
 ```
 
 ### 3. jk 모듈 설정
+mod_jk.conf 파일생성
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d
 [root@localhost conf.d]# vi mod_jk.conf
 ```
-00-jk.conf 파일 내용
+mod_jk.conf 파일 내용
 ```configure
 LoadModule jk_module modules/mod_jk.so
 
@@ -54,6 +55,7 @@ LoadModule jk_module modules/mod_jk.so
 </IfModule>
 ```
 ### 5. VirtualHost 설정
+vhost.conf 파일생성
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d
 [root@localhost conf.d]# vi vhost.conf
@@ -74,7 +76,13 @@ vhost.conf 파일 내용
   Redirect permanent / https://www.yesjnet.com/
 </VirtualHost>
 ```
-### 6. SameSite none
+### 6. SSL SameSite none 설정
+ssl.conf 파일 수정
+```console
+[root@localhost ~]# cd /etc/httpd/conf.d
+[root@localhost conf.d]# vi ssl.conf
+```
+ssl.conf 추가내용
 ```configure
 <VirtualHost _default_:443>
   .

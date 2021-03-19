@@ -8,7 +8,7 @@
 [root@localhost ~]# netstat -nltp | grep 80
 ```
 ### 2. mod_jk 설치
-##### 다운로드 페이지 : [바로가기](http://tomcat.apache.org/download-connectors.cgi)
+##### 다운로드 페이지 : <http://tomcat.apache.org/download-connectors.cgi>
 ##### /etc/httpd/modules(/usr/lib64/httpd/modules) 디렉토리 아래 설치 됨
 
 ```console

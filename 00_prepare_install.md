@@ -14,8 +14,8 @@
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 ```
 ### 4.  SELINUX 끄기
-* 현재 상태에서만 보안 설정에 대한 활성화 및 비활성화를 설정 할 수 있다.시스템 재부팅 후 원래 상태로 돌아 온다. (휘발성)
-sestatus: 상태확인, 0: 비활성화, 1`:활성화
+* 현재 상태에서만 보안 설정에 대한 활성화 및 비활성화를 설정 할 수 있다.시스템 재부팅 후 원래 상태로 돌아 온다. (휘발성)   
+sestatus: 상태확인, 0: 비활성화, 1:활성화
 ```console
 [root@localhost ~]# sestatus
 [root@localhost ~]# setenforce 0

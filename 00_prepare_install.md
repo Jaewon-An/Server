@@ -11,6 +11,10 @@
 ```console
 [root@localhost ~]# yum install java-1.8*
 [root@localhost ~]# vi /etc/profile
+
+```
+profile 에 아래 라인 추가
+```console
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk
 ```
 ### 4.  SELINUX 끄기

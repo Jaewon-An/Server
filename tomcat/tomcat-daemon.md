@@ -32,4 +32,3 @@ jsvc-unix.c:1311:20: warning: assignment to ‘__sighandler_t’ {aka ‘void (*
      act.sa_handler = controller;
 ```
 
-*

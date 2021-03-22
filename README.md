@@ -8,4 +8,4 @@
 * [How To Install the Apache Web Server on CentOS 8](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-8)
 * [How To Install Tomcat 9 On CentOS 7](https://phoenixnap.com/kb/install-tomcat-9-on-centos-7)
 * [How to Install MariaDB Server on RHEL 8 / CentOS 8](https://mariadb.com/ko/resources/blog/how-to-install-mariadb-on-rhel8-centos8/)
-* [마크다운사용법 링크 : <https://gist.github.com/ihoneymon/652be052a0727ad59601>
+* [마크다운사용법 링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)

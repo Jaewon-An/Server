@@ -42,7 +42,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 ```
 
 ### 4. 소유자 설정 및 테스트
-작업 완료 후 소유자 jnet 로 
+작업 완료 후 소유자 jnet 로 변경
 ```console
 [root@localhost ~]# cd /home/jnet/
 [root@localhost ~]# chown jnet:jnet -R /home/jnet/tomcat9

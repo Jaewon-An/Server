@@ -52,7 +52,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib
 [jnet@localhost bin]$ curl http://localhost:8080
 [jnet@localhost bin]$ tail -100f /home/jnet/tomcat9/logs/catalina.out
 ```
-
+톰캣 종료
+```console
+[jnet@localhost ~]$ cd /home/jnet/tomcat9/bin
+[jnet@localhost bin]$ ./shutdown.sh
+```
 ### 5. 자동실행 설정
 tomcat.service 파일 생성
 ```console

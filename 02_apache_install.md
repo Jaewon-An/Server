@@ -20,6 +20,7 @@
 [root@localhost native]# ./configure --with-apxs=/usr/bin/apxs
 [root@localhost native]# make && make install
 [root@localhost native]# ls -al /usr/lib64/httpd/modules | grep mod_jk*
+-rwxr-xr-x. 1 root root 1939072 10월 14 11:21 mod_jk.so
 ```
 ### 3. workers.properties 파일생성
 ```console

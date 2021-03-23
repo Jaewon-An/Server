@@ -5,7 +5,7 @@
 ```
 ### 2. 관련 rpm 설치
 ```console
-[root@localhost ~]# yum gcc gcc-c++ make automake autoconf redhat-rpm-config openssl* libtool
+[root@localhost ~]# yum install gcc gcc-c++ make automake autoconf redhat-rpm-config openssl* libtool
 ```
 ### 3. JAVA 설치
 ```console

@@ -11,7 +11,7 @@ SELINUX=enforcing (사용함)
 SELINUX=perimssive (보안경고만 사용)   
 SELINUX=disabled (사용안함)
 ```console
-[root@localhost ~]# vi /etc/sysconfig/selinu
+[root@localhost ~]# vi /etc/selinux/config
 SELINUX=disabled
 ```
 #### Apache 권한 설정

@@ -2,7 +2,7 @@
 ### 1. Apache yum 설치
 ```console
 [root@localhost ~]# yum list installed | grep httpd
-[root@localhost ~]# yum install httpd httpd-devel libtool
+[root@localhost ~]# yum install httpd* libtool
 [root@localhost ~]# systemctl enable httpd
 [root@localhost ~]# systemctl start httpd
 [root@localhost ~]# netstat -nltp | grep 80

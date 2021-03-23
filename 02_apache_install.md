@@ -26,12 +26,15 @@
 [root@localhost ~]# cd /etc/httpd/conf.d
 [root@localhost conf.d]# vi workers.properties
 ```
-workers.properties 내용
+workers.properties 내용   
 worker.ajp13.host : 톰캣 서버 IP 설정
 ```configure
 worker.list=ajp13
+### 톰캣 AJP/13 설정에서 설정한 포트번호
 worker.ajp13.port=8009
+### 톰캣 서버 IP 설정
 worker.ajp13.host=localhost
+### 변경하지 말것
 worker.ajp13.type=ajp13
 worker.ajp13.lbfactor=1
 ```

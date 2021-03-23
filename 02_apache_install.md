@@ -81,7 +81,7 @@ vhost.conf 파일 내용
   Redirect permanent / https://www.yesjnet.com/
 </VirtualHost>
 ```
-### 6. SSL SameSite none 설정
+### 6. SSL 톰캣 연동 및 SameSite none 설정
 ssl.conf 파일 수정
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d
@@ -93,6 +93,9 @@ ssl.conf 추가내용
   .
   .
   .
+  JkMount / ajp13
+  JkMount /* ajp13
+
   Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure;SameSite=None
 </VirtualHost>
 ```

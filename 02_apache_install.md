@@ -82,6 +82,10 @@ vhost.conf 파일 내용
 </VirtualHost>
 ```
 ### 6. SSL 톰캣 연동 및 SameSite none 설정
+* SSL 모듈 설치
+```console
+[root@localhost ~]# yum install mod_ssl.x86_64
+```
 ssl.conf 파일 수정
 ```console
 [root@localhost ~]# cd /etc/httpd/conf.d

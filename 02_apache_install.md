@@ -27,6 +27,7 @@
 [root@localhost conf.d]# vi workers.properties
 ```
 workers.properties 내용
+worker.ajp13.host : 톰캣 서버 IP 설정
 ```configure
 worker.list=ajp13
 worker.ajp13.port=8009

@@ -12,3 +12,4 @@
 * [마크다운사용법 링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 * [톰캣세션클러스트링-Redis](https://hongddo.tistory.com/89)
 * [IIS - Tomcat 연동](https://offbyone.tistory.com/322)
+* [OpenJDK 1.8 다운로드](https://jdk.java.net/java-se-ri/8-MR3)

@@ -19,7 +19,7 @@ setenv.sh 파일 내용
 ```
 #!/bin/bash
 CATALINA_OPTS="$CATALINA_OPTS -server -Dfile.encoding=UTF8 -Duser.timezone=GMT+9"
-CATALINA_OPTS="$CATALINA_OPTS -Xms4096m -Xmx4096m -XX:NewSize=2048m -XX:MaxNewSize=2048m"
+CATALINA_OPTS="$CATALINA_OPTS -Xms4096m -Xmx4096m"
 ```
 
 ### 3. tomcat-native 설치

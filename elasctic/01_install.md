@@ -5,11 +5,11 @@
 #### 1) /etc/security/limits.conf
 
 ```console
-# allow user 'jnet'
-jnet soft nofile unlimited         
-jnet hard nofile unlimited
-jnet soft nproc unlimited         
-jnet hard nproc unlimited
+# vi /etc/security/limits.conf
+jnet soft nofile 65536         
+jnet hard nofile 65536
+jnet soft nproc 65536         
+jnet hard nproc 65536
 jnet soft memlock unlimited         
 jnet hard memlock unlimited
 ```
@@ -19,6 +19,10 @@ jnet hard memlock unlimited
 #### 2).  /etc/sysctl.conf
 
 ```console
+# vi /etc/sysctl.conf
+vm.max_map_count=262144
+
+# sysctl -p
 ```
 
 
@@ -70,6 +74,7 @@ node.name: node-1
 #
 #path.logs: /path/to/logs
 
+
 # ----------------------------------- Memory -----------------------------------
 #
 # 엘라스틱서치가 선점한 메모리를 다른 Java 프로그램이 사용하지 못하도록 Lock을 하는 기능으로 True를 권장한다
@@ -96,6 +101,7 @@ http.port: 9200
 #
 #transport.port: 9300
 
+
 # --------------------------------- Discovery ----------------------------------
 #
 # 활성화된 다른 서버를 찾는 옵션으로 같은 클러스터로 묶인 노드의 IP 혹은 도메인 주소명을 지정하면 된다
@@ -103,9 +109,54 @@ http.port: 9200
 #
 #discovery.seed_hosts: ["host1", "host2"]
 
+
 # 마스터로 선출될 수 있는 노드들을 지정한다. 
 #
 #cluster.initial_master_nodes: ["node-1", "node-2"]
+
+
+# ---------------------------------- Various -----------------------------------
+#
+# Allow wildcard deletion of indices:
+#
+#action.destructive_requires_name: false
+
+#----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
+#
+# The following settings, TLS certificates, and keys have been automatically      
+# generated to configure Elasticsearch security features on 22-06-2022 01:11:12
+#
+# --------------------------------------------------------------------------------
+
+# Enable security features
+xpack.security.enabled: true
+
+xpack.security.enrollment.enabled: true
+
+# Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents
+xpack.security.http.ssl:
+  enabled: true
+  keystore.path: certs/http.p12
+
+# Enable encryption and mutual authentication between cluster nodes
+xpack.security.transport.ssl:
+  enabled: true
+  verification_mode: certificate
+  keystore.path: certs/transport.p12
+  truststore.path: certs/transport.p12
+# Create a new cluster with the current node only
+# Additional nodes can still join the cluster later
+cluster.initial_master_nodes: ["localhost.localdomain"]
+
+# Allow HTTP API connections from anywhere
+# Connections are encrypted and require user authentication
+http.host: 0.0.0.0
+
+# Allow other nodes to join the cluster from anywhere
+# Connections are encrypted and mutually authenticated
+#transport.host: 0.0.0.0
+
+#----------------------- END SECURITY AUTO CONFIGURATION -------------------------
 
 ```
 
@@ -131,6 +182,6 @@ http.port: 9200
 
 ```console
 [jnet@localhost elasticsearch8]$ cd bin
-[jnet@localhost bin]$ 
+[jnet@localhost bin]$ elasticsearch-setup-passwords -u elastic
 ```
 

@@ -11,7 +11,7 @@
 ```console
 [root@localhost ~]# yum install java-1.8*
 [root@localhost ~]# vi /etc/profile
-
+[root@localhost ~]# source /etc/profile
 ```
 profile 에 아래 라인 추가
 ```console

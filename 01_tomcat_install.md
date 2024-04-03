@@ -35,6 +35,7 @@ tomcat-native 설치
 etc.profile 수정
 ```console
 [root@localhost native]## vi /etc/profile
+[root@localhost native]## source /etc/profile
 ```
 etc.profile 추가 내용
 ```

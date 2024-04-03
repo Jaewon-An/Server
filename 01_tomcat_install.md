@@ -28,7 +28,7 @@ tomcat-native 설치
 [root@localhost ~]# yum install gcc make redhat-rpm-config apr* openssl*
 [root@localhost ~]# cd /home/jnet/tomcat9/bin
 [root@localhost bin]# tar xzvf tomcat-native.tar.gz
-[root@localhost bin]#  cd tomcat-native-1.2.26-src/native
+[root@localhost bin]#  cd tomcat-native-1.3.0-src/native
 [root@localhost native]#  ./configure
 [root@localhost native]# make && make install
 ```

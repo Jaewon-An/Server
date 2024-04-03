@@ -2,9 +2,9 @@
 ###### Tomcat 9.0 설치시 CentOS 7.0 이상버전에서 설치가능 하니, 참고 하세요
 ```console
 [root@localhost ~]# cd /home/jnet
-[root@localhost jnet]# wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.44/bin/apache-tomcat-9.0.44.tar.gz
-[root@localhost jnet]# tar xzvf apache-tomcat-9.0.44.tar.gz
-[root@localhost jnet]# mv apache-tomcat-9.0.44 tomcat9
+[root@localhost jnet]# wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.87/bin/apache-tomcat-9.0.87.tar.gz
+[root@localhost jnet]# tar xzvf apache-tomcat-9.0.87.tar.gz
+[root@localhost jnet]# mv apache-tomcat-9.0.87 tomcat9
 ```
 
 ### 2. Tomcat 실행 옵션 파일 생성

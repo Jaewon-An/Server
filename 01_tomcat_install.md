@@ -11,8 +11,8 @@
  setenv.sh 파일생성
 ```console
 [root@localhost ~]# cd /home/jnet/tomcat9/bin
-[root@localhost bin]#  vi setenv.sh
-[root@localhost bin]## chmod a+x setenv.sh
+[root@localhost bin]# vi setenv.sh
+[root@localhost bin]# chmod a+x setenv.sh
 ```
 
 setenv.sh 파일 내용
@@ -34,8 +34,8 @@ tomcat-native 설치
 ```
 etc.profile 수정
 ```console
-[root@localhost native]## vi /etc/profile
-[root@localhost native]## source /etc/profile
+[root@localhost native]# vi /etc/profile
+[root@localhost native]# source /etc/profile
 ```
 etc.profile 추가 내용
 ```

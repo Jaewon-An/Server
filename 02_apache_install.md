@@ -24,8 +24,7 @@
 ```
 ### 3. workers.properties 파일생성
 ```console
-[root@localhost ~]# cd /etc/httpd/conf.d
-[root@localhost conf.d]# vi workers.properties
+[root@localhost conf.d]# vi /etc/httpd/conf.d/workers.properties
 ```
 workers.properties 내용   
 worker.ajp13.host : 톰캣 서버 IP 설정
@@ -43,8 +42,7 @@ worker.ajp13.lbfactor=1
 ### 4. jk 모듈 설정
 mod_jk.conf 파일생성
 ```console
-[root@localhost ~]# cd /etc/httpd/conf.d
-[root@localhost conf.d]# vi mod_jk.conf
+[root@localhost conf.d]# vi /etc/httpd/conf.d/mod_jk.conf
 ```
 mod_jk.conf 파일 내용
 ```configure
@@ -88,8 +86,7 @@ vhost.conf 파일 내용
 ```
 ssl.conf 파일 수정
 ```console
-[root@localhost ~]# cd /etc/httpd/conf.d
-[root@localhost conf.d]# vi ssl.conf
+[root@localhost conf.d]# vi /etc/httpd/conf.d/ssl.conf
 ```
 ssl.conf 추가내용
 ```configure

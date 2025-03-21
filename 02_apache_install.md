@@ -60,8 +60,7 @@ LoadModule jk_module modules/mod_jk.so
 ### 5. VirtualHost 설정
 vhost.conf 파일생성
 ```console
-[root@localhost ~]# cd /etc/httpd/conf.d
-[root@localhost conf.d]# vi vhost.conf
+[root@localhost conf.d]# vi /etc/httpd/conf.d/vhost.conf
 ```
 vhost.conf 파일 내용
 ```configure
